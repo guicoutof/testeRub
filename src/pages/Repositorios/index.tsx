@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Text, Image, ActivityIndicator, Modal } from 'react-native';
 import api from '../../services/api';
-import Container, { ConfirmRemoverBtn, ContainerData, ContainerImg, ContainerLoading, RemoveBtn, StyledImage, StyledText, StyledTextRemove } from './styles';
+import Container, { ConfirmRemoverBtn, ContainerData, ContainerImg, ContainerLoading, ContainerTextModal, RemoveBtn, StyledImage, StyledText, StyledTextRemove } from './styles';
 import { IGitUserProps, Props, IReposProps } from './types';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Button from '../../components/Button';
@@ -98,9 +98,9 @@ const Repositorios: React.FC<Props> = (props: Props): JSX.Element => {
             <ContainerModal>
                 <ContainerModalContent>
                     <StyledTextTitle>Tem certeza ?</StyledTextTitle>
-                    <Text>
+                    <ContainerTextModal>
                         <Text>
-                            Tem certeza que deseja remover o suário
+                            Tem certeza que deseja remover o usuário
                         </Text>
                         <Text style={{ fontWeight: "bold" }}>
                             {' '}{user}
@@ -108,17 +108,17 @@ const Repositorios: React.FC<Props> = (props: Props): JSX.Element => {
                         <Text>
                             ?
                         </Text>
-                    </Text>
+                    </ContainerTextModal>
 
                     <ConfirmRemoverBtn onPress={hadleNavigateToUsuariosPage}>
                         <StyledTextRemove>
-                            <Icon name="trash-o" size={20} color="#fff" /> Remover
+                            <Icon name="trash" size={20} color="#fff" /> Remover
                         </StyledTextRemove>
                     </ConfirmRemoverBtn>
                 </ContainerModalContent>
             </ContainerModal>
         </Modal>
-    )
+    );
 
     const renderRepositories = () => (
         <Container>
@@ -147,7 +147,7 @@ const Repositorios: React.FC<Props> = (props: Props): JSX.Element => {
 
             <RemoveBtn onPress={() => { setModal(true) }}>
                 <StyledTextRemove>
-                    <Icon name="trash-o" size={20} color="#fff" /> Remover usuário
+                    <Icon name="trash" size={20} color="#fff" /> Remover usuário
                 </StyledTextRemove>
             </RemoveBtn>
 

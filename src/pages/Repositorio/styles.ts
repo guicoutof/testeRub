@@ -21,6 +21,7 @@ export const ContainerData = styled.View({
     padding: 16,
     width: '100%',
     alignItems: 'center',
+    justifyContent: 'flex-start',
 });
 
 export const ContainerImg = styled.View({
@@ -40,6 +41,7 @@ export const StyledImage = styled.Image({
 });
 
 export const StyledText = styled.Text({
+    paddingTop: 16,
     fontSize: 18,
     textAlign: 'center',
     fontWeight: 700,
@@ -47,7 +49,6 @@ export const StyledText = styled.Text({
 });
 
 export const ContainerDesc = styled.View({
-    marginTop: 24,
     width: '100%',
     display: 'flex',
     alignItems: 'flex-start',
@@ -56,7 +57,6 @@ export const ContainerDesc = styled.View({
 
 export const StyledTextUser = styled.Text({
     paddingTop: 8,
-    paddingBottom: 24,
     fontSize: 18,
     textAlign: 'center',
 })

@@ -22,9 +22,10 @@ export const ContainerModal = styled.View({
 export const ContainerModalContent = styled.View({
     height: 200,
     backgroundColor: '#fff',
-    width: '80%',
+    width: '90%',
     borderRadius: 4,
-    padding: 16,
+    paddingTop: 16,
+    paddingBottom: 16,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',

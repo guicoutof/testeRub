@@ -3,6 +3,7 @@ import { Modal, Text } from 'react-native';
 import Container, { BtnAdd, ContainerModal, ContainerModalContent, SaveBtn, SaveText, StyledInput, StyledTextTitle, TextAdd } from './styles';
 import Button from '../../components/Button'
 import { Props } from './types';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const Usuarios: React.FC<Props> = (props: Props): JSX.Element => {
     const { route, navigation } = props;
@@ -76,9 +77,7 @@ const Usuarios: React.FC<Props> = (props: Props): JSX.Element => {
             {renderBtns()}
 
             <BtnAdd onPress={() => { setModal(true); }}>
-                <TextAdd>
-                    +
-            </TextAdd>
+                <Icon name="plus" size={24} color="#fff" />
             </BtnAdd>
 
         </Container>

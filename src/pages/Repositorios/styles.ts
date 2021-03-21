@@ -65,6 +65,11 @@ export const RemoveBtn = styled.TouchableOpacity({
     margin: 16,
 });
 
+export const ContainerTextModal = styled.Text({
+    textAlign: 'center',
+    width: '64%',
+})
+
 export const StyledTextRemove = styled.Text({
     color: '#fff',
     fontSize: 18,

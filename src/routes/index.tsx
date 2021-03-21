@@ -4,7 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Usuarios from '../pages/Usuarios';
 import Repositorios from '../pages/Repositorios';
 import Repositorio from '../pages/Repositorio';
-import { Icon } from 'react-native-vector-icons/Icon';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 export type RootStackParamList = {
     Usuarios: { delete?: string };
@@ -29,13 +29,26 @@ const Routes: React.FC = () => {
                 headerTintColor: '#fff',
                 headerTitleAlign: 'center',
             }}>
-            <Stack.Screen name="Usuarios" component={Usuarios} initialParams={{ delete: '' }} />
-            <Stack.Screen name="Repositorios" component={Repositorios} options={{ title: "Repositórios" }} />
+            <Stack.Screen
+                name="Usuarios"
+                component={Usuarios}
+                initialParams={{ delete: '' }}
+                options={{ title: "Usuários" }}
+            />
+            <Stack.Screen
+                name="Repositorios"
+                component={Repositorios}
+                options={{
+                    title: "Repositórios",
+                    headerBackImage: () => <Icon name="chevron-back" size={20} color="#fff" />
+                }}
+            />
             <Stack.Screen
                 name="Repositorio"
                 component={Repositorio}
                 options={({ route }) => ({
                     title: route.params.name,
+                    headerBackImage: () => <Icon name="chevron-back" size={20} color="#fff" />,
                 })}
             />
         </Stack.Navigator>
