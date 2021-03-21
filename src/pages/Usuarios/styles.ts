@@ -7,7 +7,7 @@ const Container = styled.View({
     flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: 24,
+    paddingBottom: 8,
 });
 
 export const ContainerModal = styled.View({
@@ -17,6 +17,12 @@ export const ContainerModal = styled.View({
     position: 'absolute',
     alignItems: 'center',
     justifyContent: 'center',
+})
+
+export const ContainerData = styled.ScrollView({
+    padding: 24,
+    width: '100%',
+    marginBottom: 8,
 })
 
 export const ContainerModalContent = styled.View({

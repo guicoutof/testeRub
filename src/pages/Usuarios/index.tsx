@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { Modal, Text } from 'react-native';
-import Container, { BtnAdd, ContainerModal, ContainerModalContent, SaveBtn, SaveText, StyledInput, StyledTextTitle, TextAdd } from './styles';
+import { Modal, ScrollView, Text } from 'react-native';
+import Container, { BtnAdd, ContainerData, ContainerModal, ContainerModalContent, SaveBtn, SaveText, StyledInput, StyledTextTitle, TextAdd } from './styles';
 import Button from '../../components/Button'
 import { Props } from './types';
 import Icon from 'react-native-vector-icons/FontAwesome5';
@@ -74,7 +74,9 @@ const Usuarios: React.FC<Props> = (props: Props): JSX.Element => {
     return (
         <Container>
             {renderModal()}
-            {renderBtns()}
+            <ContainerData>
+                {renderBtns()}
+            </ContainerData>
 
             <BtnAdd onPress={() => { setModal(true); }}>
                 <Icon name="plus" size={24} color="#fff" />
